@@ -1,0 +1,10 @@
+body {
+    background-color: skyblue;
+}
+#title {
+    text-align: center;
+}
+.desc {
+    font-size: large;
+    color: pink;
+}
