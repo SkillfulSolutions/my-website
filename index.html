@@ -1,16 +1,152 @@
 <!DOCTYPE html>
-<!-- This website is about stupidity. -->
+<!-- This website documents a bit of a dream and a bit of a goal. -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stupid skillset</title>
-    </head>
-    <body>
-        <h1 id="title">Stupid assignment</h1>
-        <br>
-        <p class="desc"><strong>This</strong> <em>website</em> is stupid.</p>
-        <h2>Stupidity</h2>
-        <img src="stupid.jpg" alt="Dumb and Dumber yelling">
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>private.cloud</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">My Home Technology Path</h1>
+      <br />
+    </header>
+    <main>
+      <h2>The Original Goal</h2>
+      <img
+        src="Images/screentime.png"
+        alt="Drawing of two children watching a large, blank screen."
+      />
+      <p>
+        I dislike subscription services -saying that I'm not a fan of them is an
+        understatement. Recent years have demonstrated (Hulu, Amazon Prime,
+        Netflix, Disney, HBO etc.) that, despite increasing subscription fees,
+        quality of service for the consumer continues to decline. Advertisements
+        are inserted into the media, despite having paid to watch it. The media
+        that we originally signed up to watch gets pulled from their service so
+        we lose access to the content, or the media is moved to a different
+        service so now we have to get two subscriptions. The only thing that one
+        might successfully argue has improved is convenience associated with the
+        subscription services.
+      </p>
+      <p>
+        Having such a perspective, for years, I have felt comfortable streaming
+        media online from third-party streaming sites that do not require
+        sign-up or charge fees under fair use. Unfortunately, copyright holders
+        have been quite proficient at targeting these websites, and the quality
+        of service on those websites has since declined quite substantially,
+        impacting convenience (as a result, my three-year old knows and uses the
+        term 'buffering').
+      </p>
+      <p>
+        My original goal with learning to self-host my own media library was
+        admittedly a bit vague: I wanted to do more than have some external hard
+        drives with directories of files, but I wasn't certain I wanted to
+        venture back into peer-to-peer file sharing after basically a decade of
+        not doing so. There is additional risk with file sharing, and technology
+        has gotten so complicated! I didn't understand most of what I was doing
+        when I was downloading software from random sources on Napster and
+        Limewire and cracking the software to use it without a key or using a
+        key generator -I just wanted to play Age of Empires! The most recent
+        time I'd torrented, I received a nasty-gram from my VPN provider so I
+        hadn't attempted that since.
+        <small>
+          (all of this is completely hypothetical; I would never do something so
+          illegal and irresponsible!)</small
+        >
+      </p>
+      <p>
+        Eventually, I fell into an echo chamber online that was full of complete
+        nerds and digital anarchists, and I didn't quite realize how polarized
+        some of the group was initially. That echo chamber led me to learn about
+        Linux, open-source software and self-hosting data and services. This
+        latter point overlapped neatly with my frustration over lack of digital
+        privacy, the normalization of extreme data leaks and leaks of the
+        sensitive information of myself, my spouse and my infant child.
+      </p>
+      <h2>How It's Meandered</h2>
+      <img
+        src="Images/tennis.png"
+        alt="Image of a dog distracted by too many tennis balls."
+      />
+      <p>
+        The digital anarchists touted a particular suite of software as making
+        it elementary to access one's desired media, organize it and make it
+        available to users -perfect! This is exactly what I was looking for:
+        something presentable, navigable and easy to use for my spouse and small
+        children. This suite of software was most easily installed on Linux, and
+        I'd been looking to jump-ship from Windows at home for a while. I
+        started ordering hardware to convert my desktop gaming pc (I'm more of a
+        console guy anyways) to a home media server, installed
+        <a href="https://www.linuxmint.com/download_lmde.php"
+          >Linux Mint Debian Edition (LMDE)</a
+        >
+        on my laptop and researched home server operating systems. My interest
+        in planning for the future (scalability), desire to customize and lack
+        of familiarity with Terminals led me to
+        <a href="https://unraid.net/">Unraid</a>, a proprietary operating system
+        based on slackware Linux that is wrapped in a friendly GUI.
+      </p>
+      <p>
+        Within the year, I initiated enough projects that I feel like a golden
+        retriever in a tennis ball court. Everything seemed so logical at the
+        time, but I look around and see miscellaneous hardware from barely-begun
+        or half-complete projects.
+      </p>
+      <h2>Where I'm At</h2>
+      <img
+        src="Images/homelab.png"
+        alt="A drawing of someone facing away, facing several computer screens, in a dimly lit room."
+      />
+      <p>Current hardware and current function:</p>
+      <ul>
+        <li>
+          <strong>Tower</strong>: primary Unraid server. 16TB HDD, 4TB NVMe,
+          64GB DDR4, 17 Docker containers (mostly turned off and not fully
+          configured or just not fully utilized -I need systems/habits to
+          facilitate some of it.). Roughly 6.5TB of the 16TB are consumed with
+          media and documents. I have a cloud backup of the boot media and some
+          local backups of the container configurations.
+        </li>
+        <li>
+          <strong>Hypervisor</strong>: proxmox server with amount of NVMe
+          storage and separate drives for yadayada. I've actually used this more
+          than I anticipated, but it's also not as cool as I thought it would
+          be. It's mostly useful for school, so far.
+        </li>
+        <li>
+          <strong>Synology DiskStation</strong>: 12-bay Synology DiskStation. It
+          came with a small NVMe cache drive, and I just haven't made the time
+          to reflash the firmware and to install the OS and configure another
+          layed of my backup solution. I'd like to avoid backing up most of my
+          bulk media storage, but some of that goal depends on me figuring out
+          ZFS for my storage drives in my Unraid box.
+        </li>
+        <li>
+          <strong>Laptop</strong>: Primary workstation. Provides local
+          repository for personal notes accessed through Obsidian.
+        </li>
+        <li><strong>Desktop</strong>:</li>
+        <li><strong>Firewall box</strong>:</li>
+        <li><strong>N100 Mini-pc</strong>:</li>
+        <li><strong>RaspberryPi Zero</strong>:</li>
+        <li><strong>Samsung Galaxy Tab A9</strong>:</li>
+        <li><strong>Too many routers</strong>:</li>
+      </ul>
+      <p>Cloud services and function:</p>
+      <ul>
+        <li>
+          <em>Codeberg</em>: remote repository for personal notes accessed
+          through Obsidian
+        </li>
+        <li>Cloud server</li>
+      </ul>
+      I've continued to run into some technical skill roadblocks, and they seem
+      to bring me back to the same thing: I need to learn more.
+    </main>
+    <footer>
+      <p>&copy;Copyright pending <small>(not really)</small> 2025</p>
+    </footer>
+  </body>
 </html>
