@@ -1,0 +1,44 @@
+#title {
+  text-align: center;
+  color: #5b7f95;
+}
+body {
+  background-color: #eeead9;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+img {
+  /* display: block; can be used instead of float to have the 
+  images vertically offset from the text*/
+  float: left;
+  width: 20%;
+  height:auto;
+  margin-left: auto;
+  margin-right: 1em;  
+}
+h2, h3 {
+  text-align: center;
+  font-size: 1.3em;
+  color: #695b24;
+}
+/* Remove underline from links; set hyperlink colors */
+a[href] {
+    text-decoration: none;
+}
+a:link { color: #008000; }
+a:visited { color: #505000}
+a:hover, a:focus { color: #808080; }
+body p small {
+  font-size: smaller;
+  color: #808080;
+}
+body main p#inventory_list_name {
+    color: #695b24;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+footer {
+  margin-left: -10%;
+  font-size: smaller;
+  color: #808080;
+}
