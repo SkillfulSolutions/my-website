@@ -1,46 +1,123 @@
+/* My website's main stylesheet. */
+:root {
+  --color-1: #808080;
+}
+:root {
+  --color-2: #695b24;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Navigation menu */
+#nav_menu {
+  width: 55%;
+  margin: 0 auto;
+}
+
+#nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav_menu ul li {
+  float: left;
+  display: inline-block;
+}
+
+#nav_menu ul li a {
+  text-align: center;
+  display: block;
+  width: 175px;
+  padding: 1em;
+  text-decoration: none;
+  background-color: var(--color-1);
+  color: #ffffff;
+  font-weight: bold;
+  border-right: 2px solid #ffffff;
+}
+#nav_menu ul li a:hover {
+  background-color: var(--color-2);
+}
+
+#nav_menu ul li a.lastitem {
+  border-right: none;
+}
+/* Body */
 h1 {
   text-align: center;
   color: #5b7f95;
+  margin-top: 1em;
+  padding: 1rem;
+  clear: left;
 }
 body {
   background-color: #eeead9;
   margin-left: 10%;
   margin-right: 10%;
 }
+#page_1 {
+  background: url("../Images/5026563.jpg");
+}
 img {
   /* display: block; can be used instead of float to have the 
   images vertically offset from the text*/
   float: left;
   width: 20%;
-  height:auto;
+  height: auto;
   margin-left: auto;
-  margin-right: 1.3em; 
+  margin-right: 1.3em;
+  border: 1px solid #000000;
 }
-h2, h3 {
+h2,
+h3 {
   text-align: center;
   font-size: 1.3em;
-  color: #695b24;
+  color: var(--color-2);
   clear: both;
   padding-top: 1em;
 }
 /* Remove underline from links; set hyperlink colors */
 a[href] {
-    text-decoration: none;
+  text-decoration: none;
 }
-a:link { color: #008000; }
-a:visited { color: #505000}
-a:hover, a:focus { color: #808080; }
+a:link {
+  color: var(--color-1);
+}
+a:visited {
+  color: #113c00;
+}
+a:hover,
+a:focus {
+  color: #980202;
+}
 body p small {
   font-size: smaller;
-  color: #808080;
+  color: var(--color-1);
 }
 body main p#inventory_list_name {
-    color: #695b24;
-    font-weight: bold;
-    font-size: 1.1em;
+  color: var(--color-2);
+  font-weight: bold;
+  font-size: 1.1em;
 }
+#column1 {
+  width: 33%;
+  float: left;
+}
+#column2 {
+  width: 33%;
+  float: left;
+}
+#column3 {
+  width: 33%;
+  float: right;
+}
+/* Footer */
 footer {
+  clear: both;
   margin-left: -10%;
+  padding-top: 3em;
   font-size: smaller;
-  color: #808080;
+  color: var(--color-1);
 }
