@@ -31,6 +31,7 @@
   display: block;
   width: 175px;
   padding: 1em;
+  margin: 0 auto 0 auto;
   text-decoration: none;
   background-color: var(--color-1);
   color: #ffffff;
@@ -48,27 +49,14 @@
 h1 {
   text-align: center;
   color: #5b7f95;
-  margin-top: 1em;
-  padding: 1rem;
+  margin: 0;
+  padding: 1em;
   clear: left;
 }
 body {
   background-color: #eeead9;
   margin-left: 10%;
   margin-right: 10%;
-}
-#page_1 {
-  background: url("../Images/5026563.jpg");
-}
-img {
-  /* display: block; can be used instead of float to have the 
-  images vertically offset from the text*/
-  float: left;
-  width: 20%;
-  height: auto;
-  margin-left: auto;
-  margin-right: 1.3em;
-  border: 1px solid #000000;
 }
 h2,
 h3 {
@@ -91,27 +79,6 @@ a:visited {
 a:hover,
 a:focus {
   color: #980202;
-}
-body p small {
-  font-size: smaller;
-  color: var(--color-1);
-}
-body main p#inventory_list_name {
-  color: var(--color-2);
-  font-weight: bold;
-  font-size: 1.1em;
-}
-#column1 {
-  width: 33%;
-  float: left;
-}
-#column2 {
-  width: 33%;
-  float: left;
-}
-#column3 {
-  width: 33%;
-  float: right;
 }
 /* Footer */
 footer {

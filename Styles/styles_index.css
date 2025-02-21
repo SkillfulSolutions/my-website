@@ -1,0 +1,33 @@
+/* Body */
+img {
+  /* display: block; can be used instead of float to have the 
+  images vertically offset from the text*/
+  float: left;
+  width: 20%;
+  height: auto;
+  margin-left: auto;
+  margin-right: 1.3em;
+  border: 1px solid #000000;
+}
+body p small {
+  font-size: smaller;
+  color: var(--color-1);
+}
+body main p#inventory_list_name {
+  color: var(--color-2);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#column1 {
+  width: 33%;
+  float: left;
+}
+#column2 {
+  width: 33%;
+  float: left;
+}
+#column3 {
+  width: 33%;
+  float: right;
+}
+
