@@ -1,4 +1,5 @@
 /* Body */
+
 img {
   /* display: block; can be used instead of float to have the 
   images vertically offset from the text*/
@@ -9,25 +10,42 @@ img {
   margin-right: 1.3em;
   border: 1px solid #000000;
 }
+
+h4 {
+  color: var(--color-2);
+}
+
+aside {
+  border: #000000;
+  border-style: solid;
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}
+
+aside h4 {
+  margin-left: 0.5em;
+}
+aside ul {
+  margin-left: 1.25em;
+  margin-right: 0.25em;
+}
+
 body p small {
   font-size: smaller;
   color: var(--color-1);
 }
+
 body main p#inventory_list_name {
   color: var(--color-2);
   font-weight: bold;
   font-size: 1.1em;
 }
-#column1 {
-  width: 33%;
-  float: left;
-}
-#column2 {
-  width: 33%;
-  float: left;
-}
-#column3 {
-  width: 33%;
-  float: right;
+
+/* Media Queries */
+
+@media (max-width: 480px) {
 }
 
+@media (max-width: 768px) {
+}

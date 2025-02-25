@@ -1,0 +1,52 @@
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+main {
+  display: flex-inline;
+  flex-direction: row;
+  padding: 1em;
+  background: var(--color-5);
+  overflow-y: auto;
+}
+
+.tiles {
+  padding-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.tile img {
+  max-width: 15%;
+  border-radius: 30%;
+  padding: 0.1em;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.tile img:hover {
+  opacity: 0.4;
+}
+
+#speedtest {
+  width: 50%;
+  height: 32em;
+  border-radius: 30%;
+  padding: 0.1em;
+  background-color: #ffffff;
+}
+
+#speedtest_h2 {
+  max-width: 50%;
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+}
+@media (max-width: 640px) {
+}
