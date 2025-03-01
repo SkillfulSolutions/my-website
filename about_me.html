@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/styles_about_me.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/f65fb92f7a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>private.cloud</title>
-    <nav id="nav_menu">
+    <nav class="nav_menu">
       <ul>
         <li><a href="index.html" title="Home">Dashboard</a></li>
-        <li><a href="pursuits.html">Tech Pursuits</a></li>
+        <li><a href="enshittification.html">Enshittification of our services</a></li>
         <li><a href="about_me.html" class="current">About Me</a></li>
       </ul>
     </nav>
@@ -19,7 +23,6 @@
   <body>
     <header>
       <h1>My Home Technology Path</h1>
-      <br />
     </header>
     <main>
       <aside>
@@ -79,8 +82,8 @@
         </p>
         <p>
           Eventually, I fell into an echo chamber online that was full of
-          complete nerds and digital anarchists, and I didn't quite realize how
-          polarized some of the group was initially. That echo chamber led me to
+          complete nerds and digital anarchists, and I initially didn't quite realize how
+          polarized some of the group was. That echo chamber led me to
           learn about Linux, open-source software and self-hosting data and
           services. This latter point overlapped neatly with my frustration over
           lack of digital privacy, the normalization of extreme data leaks and
@@ -109,16 +112,68 @@
           on my laptop and researched home server operating systems. My interest
           in planning for the future (scalability), desire to customize and lack
           of familiarity with Terminals led me to
-          <a href="https://unraid.net/"> Unraid </a>
-          , a proprietary operating system based on slackware Linux that is
+          <a href="https://unraid.net/"> Unraid</a>, a proprietary operating system based on slackware Linux that is
           wrapped in a friendly GUI.
         </p>
         <p>
-          Within the year, I initiated enough projects that I feel like a golden
+          Within the year, I had initiated enough projects that I felt like a golden
           retriever in a tennis ball court. Everything seemed so logical at the
           time, but I look around and see miscellaneous hardware from
           barely-begun or half-complete projects.
         </p>
+      </section>
+      <h2 id="where_at">Where I'm At</h2>
+      <section>
+        <img
+          src="images/homelab.png"
+          alt="A drawing of someone facing away, facing several computer screens, in a dimly lit room."
+        />
+        <p id="inventory_list_name">Current hardware and current function:</p>
+        <ul>
+          <!-- Continue to work on list; review current entries and add details-->
+          <li>
+            <strong>Tower</strong>: primary Unraid server. 16TB HDD, 4TB NVMe,
+            64GB DDR4, 17 Docker containers (mostly turned off and not fully
+            configured or just not fully utilized -I need systems/habits to
+            facilitate some of it.). Roughly 6.5TB of the 16TB are consumed with
+            media and documents. I have a cloud backup of the boot media and
+            some local backups of the container configurations.
+          </li>
+          <li>
+            <strong>Hypervisor</strong>: proxmox server with amount of NVMe
+            storage and separate drives for yadayada. I've actually used this
+            more than I anticipated, but it's also not as cool as I thought it
+            would be. It's mostly useful for school, so far.
+          </li>
+          <li>
+            <strong>Synology DiskStation</strong>: 12-bay Synology DiskStation.
+            It came with a small NVMe cache drive, and I just haven't made the
+            time to reflash the firmware and to install the OS and configure
+            another layed of my backup solution. I'd like to avoid backing up
+            most of my bulk media storage, but some of that goal depends on me
+            figuring out ZFS for my storage drives in my Unraid box.
+          </li>
+          <li>
+            <strong>Laptop</strong>: Primary workstation. Provides local
+            repository for personal notes accessed through Obsidian.
+          </li>
+          <li><strong>Desktop</strong>:</li>
+          <li><strong>Firewall box</strong>:</li>
+          <li><strong>N100 Mini-pc</strong>:</li>
+          <li><strong>RaspberryPi Zero</strong>:</li>
+          <li><strong>Samsung Galaxy Tab A9</strong>:</li>
+          <li><strong>Too many routers</strong>:</li>
+        </ul>
+        <p>Cloud services and function:</p>
+        <ul>
+          <li>
+            <em>Codeberg</em>: remote repository for personal notes accessed
+            through Obsidian
+          </li>
+          <li>Cloud server</li>
+        </ul>
+        I've continued to run into some technical skill roadblocks, and they
+        seem to bring me back to the same thing: I need to learn more.
       </section>
       <h2>Yo ho, yo ho, da duh duh, da duh</h2>
       <section>
