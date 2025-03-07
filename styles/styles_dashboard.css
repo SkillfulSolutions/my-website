@@ -103,12 +103,16 @@ main {
   display: flex;
   flex-direction: column;
 }
-.service_status > *:not(h3, .ping-button) {
+.h3_not { text-align: center;}
+.url_stat {
   border: none;
   font-size: smaller;
 }
-.service_status h3 {
+.h3_not {
   text-align: center;
+}
+table {
+  border: 1px solid black;
 }
 .ping-button {
   cursor: pointer;

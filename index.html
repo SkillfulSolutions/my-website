@@ -295,18 +295,30 @@
       </script>
       <!-- Figure out how to add multiple URLs to the js -->
       <figure class="service_status">
+        <figcaption class="h3_not"><h3>Services Status</h3></figcaption>
+        <table>
+          <thead>
+          <tr>
+            <th class="left">Site</th>
+            <th>Input_button</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="left"><span class="url_stat">https://www.duckduckgo.com</span></td>
+            <td>        
+              <input
+              type="button"
+              value="Ping URL"
+              class="ping-button"
+              onclick="pingURL()"
+            /></td>
+            <td><div id="outputDiv"></div></td>
+          </tr>
+        </tbody>
+         </table>
         <br />
-        <h3 class="h3_not">Services Status</h3>
-        <br />
-        <span class="url_stat">https://www.duckduckgo.com</span>
-        <br />
-        <input
-          type="button"
-          value="Ping URL"
-          class="ping-button"
-          onclick="pingURL()"
-        />
-        <div id="outputDiv"></div>
         <script>
           function pingURL() {
             // Getting the URL from the User
