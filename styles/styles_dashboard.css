@@ -103,7 +103,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.h3_not { text-align: center;}
+
 .url_stat {
   border: none;
   font-size: smaller;
@@ -112,7 +112,22 @@ main {
   text-align: center;
 }
 table {
-  border: 1px solid black;
+  border: 1px solid #000000;
+  border-collapse: collapse;
+}
+th {
+  color: var(--color-2);
+  -webkit-text-stroke: .006em #000000;
+}
+th, td {
+  text-align: center;
+  border: 1px solid #000000;
+  padding: .313em;
+  height: 1em;
+}  
+td {
+  padding: .313em 0 .313em 0;
+  height: 2.25em;
 }
 .ping-button {
   cursor: pointer;
@@ -124,6 +139,10 @@ table {
 }
 .ping-button:hover {
   background-color: var(--color-2);
+}
+
+#outputDiv{
+  font-size: smaller;
 }
 /* SERVICE STATUS END */
 

@@ -294,23 +294,24 @@
         });
       </script>
       <!-- Figure out how to add multiple URLs to the js -->
-      <figure class="service_status">
+      <div class="service_status">
         <figcaption class="h3_not"><h3>Services Status</h3></figcaption>
         <table>
           <thead>
           <tr>
-            <th class="left">Site</th>
+            <th>Site</th>
             <th>Input_button</th>
             <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="left"><span class="url_stat">https://www.duckduckgo.com</span></td>
+            <td><span class="url_stat">https://www.duckduckgo.com</span></td>
             <td>        
               <input
               type="button"
               value="Ping URL"
+              aria-label="Ping URL"
               class="ping-button"
               onclick="pingURL()"
             /></td>
@@ -341,21 +342,21 @@
               statusCode: {
                 200: function (response) {
                   document.getElementById("outputDiv").innerHTML =
-                    "<h3 style='color:green'>Status 200: Page is up!";
+                    "<h3 style='color:#008000'>&#x2714";
                   setTimeout(function () {
                     document.getElementById("outputDiv").innerHTML = "";
                   }, 1000);
                 },
                 400: function (response) {
                   document.getElementById("outputDiv").innerHTML =
-                    "<h3 style='color:red'>Status 400: Page is down.</h3>";
+                    "<h3 style='color:#ff0000'>&#x2717";
                   setTimeout(function () {
                     document.getElementById("outputDiv").innerHTML = "";
                   }, 1000);
                 },
                 0: function (response) {
                   document.getElementById("outputDiv").innerHTML =
-                    "<h3 style='color:red'>Status 0: Page is down.</h3>";
+                    "<h3 style='color:#ff0000'>&#x26A0</h3>";
                   setTimeout(function () {
                     document.getElementById("outputDiv").innerHTML = "";
                   }, 1000);
@@ -373,7 +374,7 @@
           }
         </script>
         <!-- END: mostly, not my code -->
-      </figure>
+      </div>
     </section>
     <footer>
       <p>
