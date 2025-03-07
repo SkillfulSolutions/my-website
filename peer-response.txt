@@ -1,0 +1,30 @@
+Evan Williams
+Mar 1 7:36am
+Reply from Evan Williams
+feedback:
+1. give your speed test and service status a margin and backgound similar to the services and book marks. I think it might make it feel more aligned.
+
+2. the aside about your links throws the symmetry off. Perhaps put it under dashboard or in the main element.
+
+3. Your nav bar is great, but when you hover over the text it doesn't behave like a link. I think it is due to line 51 in styles.css use .nav_menu ul li:hover instead of .nav_menu ul li a:hover
+
+
+
+Aj Sison
+Mar 2 7:07pm
+Reply from Aj Sison
+3 pieces of feedback:
+    The alignment seems kind of off, especially on the dashboard page. The icons can be more spaced apart and centered in the box that contains them. You also have a similar issue on the enshittification page. The brand icons can be more centered to the page rather than justified to one side. The text on the top left of the dashboard page can be moved to the bottom or somewhere in the middle where the speed test and ping functions are to make the page look more symmetrical.
+    Your navigation menu is good but for some reason it doesn’t work properly on the dashboard page. It looks like there is an issue with the grid that you have on the dashboard page. The space allowed for your navigation menu is being squished and not matching what is being displayed. Also, when the navigation menu changes to a column try to make it to where the whole space allowed for the buttons is the button. Not just the little amount of space around the text. This would make it easier and more intuitive to show where the buttons are, and it would make them all the same size.
+    The contrast of your page can be better. I feel that your text for the paragraphs of your pages is a little small and hard to read. Some of the links within the paragraphs on the about me page is a similar color to the background making them very hard to read. Also, try adding more space between the text and the images here. Especially for your bulleted list. Finally on your enshittification page try adding margins to the paragraph text for it. The text here spans to the edges of the viewport unlike the about me page. This makes the text at the edges of the viewport harder to read.
+
+
+
+My follow-up:
+- I never intended the aside on the index.html (dashboard) page to be permanent -it only provided context for a user- so that was easy to remove to aid with alignment.
+- I adjusted the brand icons in styles_enshittification.css so they're in a flexbox to aid with alignment.
+- I adjusted the presentation of the speed test, service status and the enshittification.html page so their appearance, including margin and padding, more closely resemble the remainder of the site.
+- I'm still struggling to get the clickable icons on index.html aligned as I wish.
+- I adjusted the styling of the nav bar and its links in styles.css so it was in a flex box, so the links took up the width up the page when the nav bar was verticle, so the links and hover transition scale effect functioned normally on each page and so the hover transition scale effect would go away when the nav bar was verticle.
+- I adjusted some of the lighter font colors.
+- I adjusted the margin and padding on the about_me.html page for the uls.

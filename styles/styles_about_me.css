@@ -4,43 +4,20 @@ img {
   width: 20%;
   height: auto;
   margin-left: auto;
-  margin-right: 1.3em;
+  margin-right: 1.75em;
+  margin-bottom: 1em;
   border: 1px solid #000000;
 }
 
-h2,
-h3 {
+h2 {
   clear: both;
-  padding-top: 1em;
+  text-align: center;
+  margin-top: 0.5em;
+  padding-bottom: 0.313em;
 }
 
-h4 {
-  color: var(--color-2);
-}
-
-aside {
-  border: #000000;
-  border-style: solid;
-  display: inline-block;
-  width: auto;
-  vertical-align: top;
-}
-
-aside h4 {
-  margin-left: 0.5em;
-}
-
-aside ul {
-  margin-left: 1.25em;
-  margin-right: 0.25em;
-}
-
-main {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-body p small {
+body p #main_small {
+  font-weight: bold;
   font-size: smaller;
   color: var(--color-1);
 }
@@ -55,7 +32,7 @@ body main p#inventory_list_name {
 /* Media Queries */
 @media (max-width: 286px) {
   img {
-    float:none;
+    float: none;
     min-width: 85%;
   }
 }

@@ -1,48 +1,58 @@
-body {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 4em auto auto auto;
   grid-template-areas:
     "nav_bar nav_bar nav_bar nav_bar"
     "head head head head"
-    "comment main main r"
+    "l main main r"
     "l sptest serv_stat r";
   width: 100%;
+}
+
+.nav_menu {
+  grid-area: nav_bar;
 }
 
 .header {
   grid-area: head;
 }
-.nav_menu {
-  grid-area: nav_bar;
-  margin: 0;
-  /* Something odd is going on withe the margins between the nav_menu and h1 on this page. */
-}
-aside {
-  padding: 0.5em;
-  grid-area: comment;
-  border-style: hidden;
-  display: inline-block;
-  width: auto;
-  vertical-align: top;
+
+body {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Tiles */
 main {
+  margin-left: 0% !important;
+  margin-right: 0% !important;
   grid-area: main;
-  padding: 0 1em 1em 1em;
   background: var(--color-5);
-  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "head_s head_s head_s head_s head_s head_s head_s"
+    "tile_s tile_s tile_s tile_s tile_s tile_s tile_s"
+    "head_b head_b head_b head_b head_b head_b head_b"
+    "tile_b tile_b tile_b tile_b tile_b tile_b tile_b";
 }
 
-.tiles {
-  padding-bottom: 0.5em;
-  font-size: 2em;
+#tiles_s {
+  grid-area: head_s;
+}
+
+.tile_s {
+  grid-area: tile_s;
+}
+
+#tiles_b {
+  grid-area: head_b;
+}
+
+.tile_b {
+  grid-area: tile_b;
 }
 
 .tile img {
@@ -57,21 +67,14 @@ main {
 }
 /* TILES END */
 
-/* Speed Test - mostly, not my code */
-figure {
+/* Speed Test - partially, not my code */
+#speedTestFigure {
   grid-area: sptest;
+  padding: 0 1em 1em 1em;
 }
-figure h3 {
+#speedTestFigure h3 {
   text-align: center;
-  font-size: 2em;
   padding-bottom: 0.5em;
-}
-#speedtest_frame {
-  height: 32em;
-  min-width: 100%;
-  border-radius: 15%;
-  padding: 0.1em;
-  background-color: #ffffff;
 }
 #toggleSpeedTest {
   cursor: pointer;
@@ -80,37 +83,51 @@ figure h3 {
   color: #ffffff;
   padding: 0.5em;
   border-radius: 5px;
-  margin: 0.75em auto;
+  margin: 0.313em auto;
   width: fit-content;
 }
 #speedTestContainer {
-  transition: max-height 0.3s ease;
+  position: relative;
+}
+#speedtest_frame {
+  height: 32em;
+  min-width: 100%;
+  border-radius: 20%;
 }
 /* SPEED TEST END */
 
 /* Service Status */
+/* CONSIDER TURNING INTO GRID */
 .service_status {
   grid-area: serv_stat;
-  padding: 0.625em;
-  margin: 0.625em 0;
   display: flex;
   flex-direction: column;
 }
 .service_status > *:not(h3, .ping-button) {
-  padding: 0.625em;
   border: none;
   font-size: smaller;
 }
+.service_status h3 {
+  text-align: center;
+}
 .ping-button {
+  cursor: pointer;
   padding: 0.625em;
   border: 0.00625em solid #000000;
   background: #cccccc;
   border-radius: 0.313em;
+  max-width: 7em;
 }
 .ping-button:hover {
   background-color: var(--color-2);
 }
 /* SERVICE STATUS END */
+
+/* Footer */
+footer {
+  margin-top: 40em;
+}
+/* FOOTER END */
 
 /* Media Queries */
 @media (max-width: 700px) {

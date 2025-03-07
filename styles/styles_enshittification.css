@@ -1,24 +1,68 @@
-section.brands {
-  font-size: 7rem;
+h2 {
+  clear: both;
+  text-align: center;
+  margin-top: 0.5em;
+  padding-bottom: 0.313em;
 }
 
-.xkcd {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+blockquote {
+  margin: 0 10% 0.25em 10%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  text-align: justify;
+}
+.person {
+  text-align: center;
 }
 
+.href_not:hover {
+  transform: scale(1.1);
+}
 .href_not {
   display: block;
   padding-top: 0.313em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  max-width: 52%;
   color: #000000 !important;
   font-size: 2em;
   font-weight: 800;
   font-variant: small-caps;
   font-family: Lucida, Helvetica, sans-serif;
+}
+
+.xkcd {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  max-width: 498px;
+  width: 100%;
+  height: auto;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.brands i {
+  font-size: 4rem;
+  color: #0000008a;
+  transition: transform 0.3s;
+}
+.brands i:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 703px) {
+  blockquote {
+    text-align: left;
+  }
 }

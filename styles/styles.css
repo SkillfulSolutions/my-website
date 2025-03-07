@@ -22,14 +22,16 @@
   margin: 0%;
   padding: 0%;
 }
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 /* Navigation menu */
 .nav_menu {
   position: static;
   width: auto;
-  height: 0.5em;
-  margin: 0 0 2em 0;
-  padding-bottom: 1em;
+  height: 4em;
 }
 
 .nav_menu ul {
@@ -41,7 +43,7 @@
 
 .nav_menu ul li a {
   text-align: center;
-  display: inline-block;
+  display: flex;
   padding: 1em !important;
   text-decoration: none;
   background-color: var(--color-1);
@@ -51,6 +53,7 @@
 }
 .nav_menu ul li a:hover {
   background-color: var(--color-2);
+  transform: scale(1.1);
 }
 /* NAV END */
 
@@ -58,13 +61,15 @@
 h1 {
   text-align: center;
   color: var(--color-3);
-  margin-top: 0.3em;
-  padding: 0.25em;
+  margin-top: 0;
+  padding: 0;
   clear: left;
   font-size: 4em;
 }
+
 body {
-  background-color: var(--color-4);
+  background: linear-gradient(to bottom right, #eeead9, var(--color-1));
+  background-size: cover;
 }
 h2 {
   text-align: center;
@@ -75,22 +80,32 @@ h3 {
   font-size: 2em;
   color: var(--color-2);
 }
+
 a[href] {
   text-decoration: none;
 }
-a:link {
-  color: var(--color-1);
+.link {
+  color: var(--color-2);
+  font-weight: bold;
 }
-a:visited {
+.link:visited {
   color: #113c00;
 }
-a:hover,
-a:focus {
+.link:hover {
   color: #980202;
+  transform: scale(1.1);
 }
-body {
-  background: linear-gradient(to bottom right, #eeead9, var(--color-1));
-  background-size: cover;
+
+.return_links:visited {
+  color: #113c00;
+}
+.return_links:hover {
+  color: #980202;
+  transform: scale(1.1);
+}
+.return_links {
+  color: #695b24;
+  font-weight: bold;
 }
 /* BODY END */
 
@@ -104,52 +119,58 @@ footer {
 /* FOOTER END */
 
 /* Media Queries */
-@media (max-width: 286px) {
-  h1 {
-    font-size: 1.75rem;
-    margin-top: 9rem !important;
-  }
-  h2 {
-    font-size: 1em !important;
-  }
-  h3 {
-    font-size: 1em !important;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    margin-top: 9rem !important;
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.5em !important;
-  }
-  h3 {
-    font-size: 1.5em !important;
-  }
+@media (max-width: 305px) {
   .nav_menu ul li a {
-    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 0.9em;
+  }
+  h3 {
     font-size: 0.9em;
   }
 }
 
-@media (max-width: 597px) {
-  h1 {
-    margin-top: 4em;
+@media (min-width: 306px) and (max-width: 480px) {
+  .nav_menu ul li a {
+    font-size: 0.9em;
   }
-  /* ***Something about this next declaration breaks the nav bar links on 
-my index.html page when the media query threshold is met. Need to ask
-Lindsey for help troubleshooting.*** */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 703px) {
+  .nav_menu {
+    position: static;
+    width: auto;
+    height: 13em;
+  }
   .nav_menu ul {
     flex-direction: column;
   }
   .nav_menu ul li a {
     text-align: left;
   }
+  .nav_menu ul li a:hover {
+    transform: none;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 986px) {
+  .nav_menu ul li a {
+    padding: 0.75em;
+    font-size: 1em;
+  }
   h1 {
     font-size: 2.5em;
   }
@@ -158,10 +179,6 @@ Lindsey for help troubleshooting.*** */
   }
   h3 {
     font-size: 1.5em;
-  }
-  .nav_menu ul li a {
-    padding: 0.75em;
-    font-size: 1em;
   }
 }
 

@@ -1,0 +1,15 @@
+h3 {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.song {
+  margin: 0 30% 0 30%;
+  max-width: fit-content;
+  font-style: italic;
+  padding-top: 0.313em;
+}
+.song_cite {
+  display: block;
+  text-align: center;
+}

@@ -2,11 +2,11 @@
 <!-- This website documents a bit of a dream and a bit of a goal. -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/styles_dashboard.css" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/styles_dashboard.css"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <script
       src="https://kit.fontawesome.com/f65fb92f7a.js"
       crossorigin="anonymous"
@@ -20,24 +20,20 @@
     ></script>
     <style type="text/css">
       .responded {
-        color: green;
+        color: #008000;
       }
       .checking,
       .unchecked {
         color: #ff8c00;
       }
       .timeout {
-        color: red;
+        color: #ff0000;
       }
     </style>
     <!-- END: not my code -->
   </head>
   <body>
     <section class="container">
-      <!-- ***Something odd is going on with the nav menu on this page. It's links 
-      are less responsive than links on other pages. There is a css declaration
-      in styles.css re: the nav menu and it breaks two of the links on this page.
-      Need to ask Lindsey for help troubleshooting.*** -->
       <nav class="nav_menu">
         <ul>
           <li>
@@ -46,30 +42,23 @@
           <li>
             <a href="enshittification.html">Enshittification of our services</a>
           </li>
+          <li><a href="shanties.html">Sea Shanties</a></li>
           <li><a href="about_me.html">About Me</a></li>
         </ul>
       </nav>
       <header class="header">
         <h1>Dashboard</h1>
       </header>
-      <aside>
-        <p>
-          * For my production version of the site, these links will link to my
+      <!-- * For my production version of the site, these links will link to my
           self-hosted services or will act as shortcuts to websites.
-        </p>
-        <br />
-        <p>
           The Unraid link is an example of this -it points to my local Unraid
           server. I didn't want too many broken links when folks were viewing
           the a demo version so I only included that and the link for the local
-          ip address of my consumer router. *
-        </p>
-      </aside>
+          ip address of my consumer router. * -->
       <main class="main">
-        <!-- For my production version of the site, these links will link to my 
-       self-hosted services or will act as shortcuts to websites. -->
-        <h2 class="tiles">Services</h2>
-        <!-- TEMPLATE
+        <h2 class="tiles" id="tiles_s">Services</h2>
+        <div class="tile_s">
+          <!-- TEMPLATE
       <a href="" target="_blank" class="tile">
         <img
           src="images/-icon.png"
@@ -79,205 +68,216 @@
         />
       </a>
       END TEMPLATE -->
-        <!-- ADD Synology NAS and Tailscale -->
-        <a href="http://tower.local/" target="_blank" class="tile">
-          <img
-            src="images/unraid-icon.png"
-            alt="Unraid"
-            title="Unraid Server"
-            class="title-icon"
-          />
-        </a>
-        <a
-          href="https://www.proxmox.com/en/products/proxmox-virtual-environment/overview"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/proxmox-icon.png"
-            alt="Proxmox"
-            title="Proxmox VE"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://pi-hole.net/" target="_blank" class="tile">
-          <img
-            src="images/pi-hole-icon.png"
-            alt="Pi-hole"
-            title="Pi-hole"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://filezilla-project.org/" target="_blank" class="tile">
-          <img
-            src="images/filezilla-icon.png"
-            alt="FileZilla"
-            title="FileZilla FTP"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://docs.paperless-ngx.com/" target="_blank" class="tile">
-          <img
-            src="images/paperless-ngx-icon.png"
-            alt="Paperless-NGX"
-            title="FrixDocs by Paperless-NGX"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://www.stirlingpdf.com/" target="_blank" class="tile">
-          <img
-            src="images/stirling-pdf-icon.png"
-            alt="Stirling PDF"
-            title="PDF Manipulation"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://tandoor.dev/" target="_blank" class="tile">
-          <img
-            src="images/tandoor-icon.png"
-            alt="Tandoor Recipe Manager"
-            title="Tandoor Recipes"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://www.audiobookshelf.org/" target="_blank" class="tile">
-          <img
-            src="images/audiobookshelf-icon.png"
-            alt="Audiobookshelf"
-            title="Audiobookshelf"
-            class="tile-icon"
-          />
-        </a>
-        <a
-          href="https://github.com/alexta69/metube"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/metube-icon.png"
-            alt="MeTube"
-            title="MeTube, make YouTube yours"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://jellyfin.org/" target="_blank" class="tile">
-          <img
-            src="images/jellyfin-icon.png"
-            alt="Jellyfin"
-            title="Jellyfin Media System"
-            class="tile-icon"
-          />
+          <!-- ADD Synology NAS and Tailscale -->
+          <a href="http://tower.local/" target="_blank" class="tile">
+            <img
+              src="images/unraid-icon.png"
+              alt="Unraid"
+              title="Unraid Server"
+              class="title-icon"
+            />
+          </a>
+          <a
+            href="https://www.proxmox.com/en/products/proxmox-virtual-environment/overview"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/proxmox-icon.png"
+              alt="Proxmox"
+              title="Proxmox VE"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://pi-hole.net/" target="_blank" class="tile">
+            <img
+              src="images/pi-hole-icon.png"
+              alt="Pi-hole"
+              title="Pi-hole"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://filezilla-project.org/" target="_blank" class="tile">
+            <img
+              src="images/filezilla-icon.png"
+              alt="FileZilla"
+              title="FileZilla FTP"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://docs.paperless-ngx.com/"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/paperless-ngx-icon.png"
+              alt="Paperless-NGX"
+              title="FrixDocs by Paperless-NGX"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://www.stirlingpdf.com/" target="_blank" class="tile">
+            <img
+              src="images/stirling-pdf-icon.png"
+              alt="Stirling PDF"
+              title="PDF Manipulation"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://tandoor.dev/" target="_blank" class="tile">
+            <img
+              src="images/tandoor-icon.png"
+              alt="Tandoor Recipe Manager"
+              title="Tandoor Recipes"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://www.audiobookshelf.org/"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/audiobookshelf-icon.png"
+              alt="Audiobookshelf"
+              title="Audiobookshelf"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/alexta69/metube"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/metube-icon.png"
+              alt="MeTube"
+              title="MeTube, make YouTube yours"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://jellyfin.org/" target="_blank" class="tile">
+            <img
+              src="images/jellyfin-icon.png"
+              alt="Jellyfin"
+              title="Jellyfin Media System"
+              class="tile-icon"
+            />
+          </a>
           <!-- END LIST of self-hosted services. Links above will be changed in my production version
          to point to these web applications on my home network. Links below are bookmarks to the internet. -->
-        </a>
+        </div>
         <br />
-        <h2 class="tiles">Bookmarks</h2>
-        <a href="https://codeberg.org/" target="_blank" class="tile">
-          <img
-            src="images/codeberg-icon.png"
-            alt="12ft io"
-            title="12ft io"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://github.com/" target="_blank" class="tile">
-          <img
-            src="images/github-icon.png"
-            alt="Github"
-            title="Github"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://192.168.0.1/" target="_blank" class="tile">
-          <img
-            src="images/centurylink-icon.png"
-            alt="Centurylink"
-            title="C'link Router"
-            class="tile-icon"
-          />
-        </a>
-        <a
-          href="https://outlook.office.com/mail/?realm=student.olympic.edu&exsvurl=1&ll-cc=1033&modurl=0&url=%2fowa%2f%3frealm%253dstudent.olympic.edu%2526exsvurl%253d1%2526ll-cc%253d1033%2526modurl%253d0%2526login_hint%253dMattFrix%252540student.olympic.edu"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/outlook-icon.png"
-            alt="Outlook web client"
-            title="Outlook"
-            class="tile-icon"
-          />
-        </a>
-        <a
-          href="https://adfs2.olympic.edu/adfs/ls?SAMLRequest=fZJfT8IwFMXf%2FRRL37expqA0gwQhRhLUBaYPvpjSddCka2dvq%2FLt7YZEfJDX0%2FO75%2F5pDqxRLZ15t9dr8e4FuOirURpo%2FzBB3mpqGEigmjUCqON0M3tYUZwMaGuNM9wodIZcJhiAsE4ajaLlYoLetqMx56wmMckIjkk9GMfb8XYU42pYc8IIYdU1il6EhcBMUCgRQAAvlhoc0y5IA0ziwU2MsxJjSoYUj19RtAhzSM1cT%2B2da4GmKatqwIlRh6aVPBGV75VUAYpmp77mRoNvhN0I%2ByG5eF6vfvkTKUO29dx5KxJumlSZndRpNzyKip%2BV3EpdSb27vI3t0QT0viyLuHjalGiad3VoP6OddskXgjsrztNzIj%2Fe8zFkLReFUZIfojtjG%2Bb%2BbyVLsl6RVVz3Vuo1tILLWooq7EYp8zm3gjkxQSFfoHR6DP37b6ZX3w%3D%3D"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/canvas-icon.png"
-            alt="Canvas for OC"
-            title="Canvas"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://12ft.io/" target="_blank" class="tile">
-          <img
-            src="images/12ft-icon.png"
-            alt="12ft io"
-            title="12ft io"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://archive.org/" target="_blank" class="tile">
-          <img
-            src="images/internet_archive-icon.png"
-            alt="Internet Archive"
-            title="Internet Archive"
-            class="tile-icon"
-          />
-        </a>
-        <a
-          href="https://www.redhat.com/en/command-line-heroes"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/redhat-icon.png"
-            alt="Red Hat, Inc."
-            title="Command Line Heroes"
-            class="tile-icon"
-          />
-        </a>
-        <a
-          href="https://www.youtube.com/@SowtheLand/videos"
-          target="_blank"
-          class="tile"
-        >
-          <img
-            src="images/sowtheland-icon.jpg"
-            alt="Sow the Land"
-            title="Sow the Land"
-            class="tile-icon"
-          />
-        </a>
-        <a href="https://www2.zoechip.com/" target="_blank" class="tile">
-          <img
-            src="images/zoechip-icon.png"
-            alt="Zoechip"
-            title="Zoechip"
-            class="tile-icon"
-          />
-        </a>
+        <h2 class="tiles" id="tiles_b">Bookmarks</h2>
+        <div class="tile_b">
+          <a href="https://codeberg.org/" target="_blank" class="tile">
+            <img
+              src="images/codeberg-icon.png"
+              alt="12ft io"
+              title="12ft io"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://github.com/" target="_blank" class="tile">
+            <img
+              src="images/github-icon.png"
+              alt="Github"
+              title="Github"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://192.168.0.1/" target="_blank" class="tile">
+            <img
+              src="images/centurylink-icon.png"
+              alt="Centurylink"
+              title="C'link Router"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://outlook.office.com/mail/?realm=student.olympic.edu&exsvurl=1&ll-cc=1033&modurl=0&url=%2fowa%2f%3frealm%253dstudent.olympic.edu%2526exsvurl%253d1%2526ll-cc%253d1033%2526modurl%253d0%2526login_hint%253dMattFrix%252540student.olympic.edu"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/outlook-icon.png"
+              alt="Outlook web client"
+              title="Outlook"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://adfs2.olympic.edu/adfs/ls?SAMLRequest=fZJfT8IwFMXf%2FRRL37expqA0gwQhRhLUBaYPvpjSddCka2dvq%2FLt7YZEfJDX0%2FO75%2F5pDqxRLZ15t9dr8e4FuOirURpo%2FzBB3mpqGEigmjUCqON0M3tYUZwMaGuNM9wodIZcJhiAsE4ajaLlYoLetqMx56wmMckIjkk9GMfb8XYU42pYc8IIYdU1il6EhcBMUCgRQAAvlhoc0y5IA0ziwU2MsxJjSoYUj19RtAhzSM1cT%2B2da4GmKatqwIlRh6aVPBGV75VUAYpmp77mRoNvhN0I%2ByG5eF6vfvkTKUO29dx5KxJumlSZndRpNzyKip%2BV3EpdSb27vI3t0QT0viyLuHjalGiad3VoP6OddskXgjsrztNzIj%2Fe8zFkLReFUZIfojtjG%2Bb%2BbyVLsl6RVVz3Vuo1tILLWooq7EYp8zm3gjkxQSFfoHR6DP37b6ZX3w%3D%3D"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/canvas-icon.png"
+              alt="Canvas for OC"
+              title="Canvas"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://12ft.io/" target="_blank" class="tile">
+            <img
+              src="images/12ft-icon.png"
+              alt="12ft io"
+              title="12ft io"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://archive.org/" target="_blank" class="tile">
+            <img
+              src="images/internet_archive-icon.png"
+              alt="Internet Archive"
+              title="Internet Archive"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://www.redhat.com/en/command-line-heroes"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/redhat-icon.png"
+              alt="Red Hat, Inc."
+              title="Command Line Heroes"
+              class="tile-icon"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@SowtheLand/videos"
+            target="_blank"
+            class="tile"
+          >
+            <img
+              src="images/sowtheland-icon.jpg"
+              alt="Sow the Land"
+              title="Sow the Land"
+              class="tile-icon"
+            />
+          </a>
+          <a href="https://www2.zoechip.com/" target="_blank" class="tile">
+            <img
+              src="images/zoechip-icon.png"
+              alt="Zoechip"
+              title="Zoechip"
+              class="tile-icon"
+            />
+          </a>
+        </div>
       </main>
       <!-- SPEED TEST: 2/24/25, I'm not really sure what an iframe is, but I copied this code from
        another website and adjusted the example to the URL that I wished to use. -->
+      <!-- START: mostly, not my code -->
       <figure id="speedTestFigure">
         <h3 id="toggleSpeedTest">Speed Test</h3>
         <div id="speedTestContainer" style="display: none">
           <iframe id="speedtest_frame" src="https://librespeed.org/"></iframe>
         </div>
       </figure>
-
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const toggleButton = document.getElementById("toggleSpeedTest");
@@ -286,15 +286,13 @@
 
           toggleButton.addEventListener("click", function () {
             if (speedTestContainer.style.display === "none") {
-              speedTestContainer.style.display = "block"; // Show the iframe
+              speedTestContainer.style.display = ""; // Show the iframe
             } else {
               speedTestContainer.style.display = "none"; // Hide the iframe
             }
           });
         });
       </script>
-
-      <!-- START: mostly, not my code -->
       <!-- Figure out how to add multiple URLs to the js -->
       <figure class="service_status">
         <br />
