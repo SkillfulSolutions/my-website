@@ -1,8 +1,9 @@
+/* Style sheet for shanties.html */
+/* Body */
 h3 {
   text-align: center;
   margin-top: 0.5em;
 }
-
 .song {
   margin: 0 30% 0 30%;
   font-style: italic;
@@ -13,6 +14,7 @@ h3 {
   display: block;
   text-align: center;
 }
+/* BODY END */
 /* Media Queries */
 @media (max-width: 300px) {
   .song {

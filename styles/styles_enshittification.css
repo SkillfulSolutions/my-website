@@ -1,10 +1,11 @@
+/* Style sheet for enshittification.html */
+/* Body */
 h2 {
   clear: both;
   text-align: center;
   margin-top: 0.5em;
   padding-bottom: 0.313em;
 }
-
 blockquote {
   margin: 0 10% 0.25em 10%;
   font-family: "Montserrat", sans-serif;
@@ -15,7 +16,6 @@ blockquote {
 .person {
   text-align: center;
 }
-
 .href_not:hover {
   transform: scale(1.1);
 }
@@ -32,7 +32,6 @@ blockquote {
   font-variant: small-caps;
   font-family: Lucida, Helvetica, sans-serif;
 }
-
 .xkcd {
   display: block;
   margin-left: auto;
@@ -43,7 +42,6 @@ blockquote {
   width: 100%;
   height: auto;
 }
-
 .brands {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +58,8 @@ blockquote {
 .brands i:hover {
   transform: scale(1.1);
 }
-
+/* BODY END */
+/* Media Queries */
 @media (max-width: 703px) {
   blockquote {
     text-align: left;
