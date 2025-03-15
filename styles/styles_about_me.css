@@ -2,9 +2,22 @@
 img {
   float: left;
   width: 20%;
+  max-width: 225px;
+  min-width: 115px;
   height: auto;
   margin-left: auto;
   margin-right: 1.75em;
+  margin-bottom: 1em;
+  border: 1px solid #000000;
+}
+.img_tennis {
+  float: right;
+  width: 20%;
+  max-width: 225px;
+  min-width: 117px;
+  height: auto;
+  margin-left: 1.75em;
+  margin-right: auto;
   margin-bottom: 1em;
   border: 1px solid #000000;
 }
@@ -13,9 +26,7 @@ h2 {
   clear: both;
   text-align: center;
   margin-top: 0.5em;
-  padding-bottom: 0.313em;
 }
-
 body p #main_small {
   font-weight: bold;
   font-size: smaller;
@@ -27,17 +38,17 @@ body main p#inventory_list_name {
   font-weight: bold;
   font-size: 1.1em;
 }
+#inventory li {
+  padding: 0.5em 0 0.5em 0;
+}
+#cloud_services {
+  padding: 1em 0 0 0;
+}
 /* BODY END */
 
 /* Media Queries */
 @media (max-width: 286px) {
   img {
     float: none;
-    min-width: 85%;
-  }
-}
-@media (min-width: 287px) and (max-width: 640px) {
-  img {
-    min-width: 105px;
   }
 }

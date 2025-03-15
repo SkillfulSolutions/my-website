@@ -2,11 +2,11 @@
 <!-- This website documents a bit of a dream and a bit of a goal. -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="styles/styles.css"/>
-    <link rel="stylesheet" href="styles/styles_dashboard.css"/>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles_dashboard.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <script
       src="https://kit.fontawesome.com/f65fb92f7a.js"
       crossorigin="anonymous"
@@ -33,14 +33,16 @@
     <!-- END: not my code -->
   </head>
   <body>
-    <section class="container">
+    <main class="container">
       <nav class="nav_menu">
         <ul>
           <li>
             <a href="index.html" class="current" title="Home">Dashboard</a>
           </li>
           <li>
-            <a href="html/enshittification.html">Enshittification of our services</a>
+            <a href="html/enshittification.html"
+              >Enshittification of our services</a
+            >
           </li>
           <li><a href="html/shanties.html">Sea Shanties</a></li>
           <li><a href="html/about_me.html">About Me</a></li>
@@ -55,19 +57,9 @@
           server. I didn't want too many broken links when folks were viewing
           the a demo version so I only included that and the link for the local
           ip address of my consumer router. * -->
-      <main class="main">
+      <section class="main">
         <h2 class="tiles" id="tiles_s">Services</h2>
         <div class="tile_s">
-          <!-- TEMPLATE
-      <a href="" target="_blank" class="tile">
-        <img
-          src="images/-icon.png"
-          alt=""
-          title=""
-          class="tile-icon"
-        />
-      </a>
-      END TEMPLATE -->
           <!-- ADD Synology NAS and Tailscale -->
           <a href="http://tower.local/" target="_blank" class="tile">
             <img
@@ -168,7 +160,6 @@
           <!-- END LIST of self-hosted services. Links above will be changed in my production version
          to point to these web applications on my home network. Links below are bookmarks to the internet. -->
         </div>
-        <br />
         <h2 class="tiles" id="tiles_b">Bookmarks</h2>
         <div class="tile_b">
           <a href="https://codeberg.org/" target="_blank" class="tile">
@@ -267,58 +258,43 @@
               class="tile-icon"
             />
           </a>
+          <a href="https://open-slum.org/" target="_blank" class="tile">
+            <img
+              src="images/open-slum-icon.png"
+              alt="The Shadow Library Uptime Monitor"
+              title="The Shadow Library Uptime Monitor"
+              class="tile-icon"
+            />
+          </a>
         </div>
-      </main>
-      <!-- SPEED TEST: 2/24/25, I'm not really sure what an iframe is, but I copied this code from
-       another website and adjusted the example to the URL that I wished to use. -->
-      <!-- START: mostly, not my code -->
-      <figure id="speedTestFigure">
-        <h3 id="toggleSpeedTest">Speed Test</h3>
-        <div id="speedTestContainer" style="display: none">
-          <iframe id="speedtest_frame" src="https://librespeed.org/"></iframe>
-        </div>
-      </figure>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const toggleButton = document.getElementById("toggleSpeedTest");
-          const speedTestContainer =
-            document.getElementById("speedTestContainer");
-
-          toggleButton.addEventListener("click", function () {
-            if (speedTestContainer.style.display === "none") {
-              speedTestContainer.style.display = ""; // Show the iframe
-            } else {
-              speedTestContainer.style.display = "none"; // Hide the iframe
-            }
-          });
-        });
-      </script>
+      </section>
       <!-- Figure out how to add multiple URLs to the js -->
       <div class="service_status">
         <figcaption class="h3_not"><h3>Services Status</h3></figcaption>
         <table>
           <thead>
-          <tr>
-            <th>Site</th>
-            <th>Input_button</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="url_stat">https://www.duckduckgo.com</span></td>
-            <td>        
-              <input
-              type="button"
-              value="Ping URL"
-              aria-label="Ping URL"
-              class="ping-button"
-              onclick="pingURL()"
-            /></td>
-            <td><div id="outputDiv"></div></td>
-          </tr>
-        </tbody>
-         </table>
+            <tr>
+              <th>Site</th>
+              <th>Input_button</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="url_stat">https://www.duckduckgo.com</td>
+              <td>
+                <input
+                  type="button"
+                  value="Ping URL"
+                  aria-label="Ping URL"
+                  class="ping-button"
+                  onclick="pingURL()"
+                />
+              </td>
+              <td><div id="outputDiv"></div></td>
+            </tr>
+          </tbody>
+        </table>
         <br />
         <script>
           function pingURL() {
@@ -374,10 +350,38 @@
           }
         </script>
         <!-- END: mostly, not my code -->
+        <!-- SPEED TEST: 2/24/25, I'm not really sure what an iframe is, but I copied this code from
+       another website and adjusted the example to the URL that I wished to use. -->
+        <!-- START: mostly, not my code -->
+        <figure id="speedTestFigure">
+          <h3 id="toggleSpeedTest">Speed Test</h3>
+          <div id="speedTestContainer">
+            <iframe id="speedtest_frame" src="https://librespeed.org/"></iframe>
+          </div>
+        </figure>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.getElementById("toggleSpeedTest");
+            const speedTestContainer =
+              document.getElementById("speedTestContainer");
+
+            toggleButton.addEventListener("click", function () {
+              if (speedTestContainer.style.display === "none") {
+                speedTestContainer.style.display = ""; // Show the iframe
+              } else {
+                speedTestContainer.style.display = "none"; // Hide the iframe
+              }
+            });
+          });
+        </script>
       </div>
-    </section>
+    </main>
     <footer>
       <p>
+        <a href="#top" class="return_links">Return to Top</a>
+        <a href="../index.html" class="return_links">Dashboard</a>
+      </p>
+      <p class="copyright_p">
         &copy;Copyright pending 2025<small><sub> (not really)</sub></small> by
         Michael Jones. All rights reserved.
       </p>

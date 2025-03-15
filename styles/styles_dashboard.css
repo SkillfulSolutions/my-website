@@ -1,12 +1,13 @@
 .container {
   display: grid;
-  grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-  grid-template-rows: 4em auto auto auto;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 4em auto auto auto auto;
   grid-template-areas:
-    "nav_bar nav_bar nav_bar nav_bar"
-    "head head head head"
-    "l main main r"
-    "l sptest serv_stat r";
+    "nav_bar nav_bar nav_bar"
+    "head head head"
+    "l main r"
+    "l serv_stat r"
+    "l sptest r";
   width: 100%;
 }
 
@@ -18,45 +19,39 @@
   grid-area: head;
 }
 
-body {
+main {
   margin-left: 0;
   margin-right: 0;
 }
+h2,
+h3 {
+  margin-top: 0.5em;
+}
 
 /* Tiles */
-main {
-  margin-left: 0% !important;
-  margin-right: 0% !important;
+.main {
   grid-area: main;
-  background: var(--color-5);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto;
-  grid-template-areas:
-    "head_s head_s head_s head_s head_s head_s head_s"
-    "tile_s tile_s tile_s tile_s tile_s tile_s tile_s"
-    "head_b head_b head_b head_b head_b head_b head_b"
-    "tile_b tile_b tile_b tile_b tile_b tile_b tile_b";
 }
 
-#tiles_s {
-  grid-area: head_s;
-}
-
-.tile_s {
-  grid-area: tile_s;
-}
-
-#tiles_b {
-  grid-area: head_b;
-}
-
+.tile_s,
 .tile_b {
-  grid-area: tile_b;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0;
+  align-items: center;
+  justify-items: center;
+  background: var(--color-5);
+  padding: 1em;
+}
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.313em;
 }
 
 .tile img {
-  max-width: 12%;
+  max-width: 100%;
   min-width: 65px;
   border-radius: 30%;
   padding: 0.1em;
@@ -70,11 +65,12 @@ main {
 /* Speed Test - partially, not my code */
 #speedTestFigure {
   grid-area: sptest;
+  margin-top: 0.5em;
   padding: 0 1em 1em 1em;
 }
-#speedTestFigure h3 {
-  text-align: center;
-  padding-bottom: 0.5em;
+#toggleSpeedTest:hover {
+  background-color: var(--color-2);
+  transform: scale(1.1);
 }
 #toggleSpeedTest {
   cursor: pointer;
@@ -86,49 +82,53 @@ main {
   margin: 0.313em auto;
   width: fit-content;
 }
-#speedTestContainer {
-  position: relative;
-}
 #speedtest_frame {
-  height: 32em;
+  height: 40em;
   min-width: 100%;
   border-radius: 20%;
 }
+
 /* SPEED TEST END */
 
 /* Service Status */
-/* CONSIDER TURNING INTO GRID */
 .service_status {
   grid-area: serv_stat;
   display: flex;
   flex-direction: column;
 }
 
-.url_stat {
-  border: none;
-  font-size: smaller;
-}
 .h3_not {
   text-align: center;
 }
 table {
   border: 1px solid #000000;
   border-collapse: collapse;
+  margin: 0 10% 0 10%;
+}
+thead {
+  background: linear-gradient(to bottom right, #6b8e23, var(--color-2));
 }
 th {
-  color: var(--color-2);
-  -webkit-text-stroke: .006em #000000;
+  color: #eeead9;
 }
-th, td {
+th,
+td {
   text-align: center;
   border: 1px solid #000000;
-  padding: .313em;
+  padding: 0.313em;
   height: 1em;
-}  
+}
 td {
-  padding: .313em 0 .313em 0;
+  padding: 0.313em 0 0.313em 0;
   height: 2.25em;
 }
+.url_stat {
+  border: none;
+  font-size: smaller;
+  text-align: left;
+  padding-left: 1em;
+}
+
 .ping-button {
   cursor: pointer;
   padding: 0.625em;
@@ -141,7 +141,7 @@ td {
   background-color: var(--color-2);
 }
 
-#outputDiv{
+#outputDiv {
   font-size: smaller;
 }
 /* SERVICE STATUS END */
@@ -153,7 +153,30 @@ footer {
 /* FOOTER END */
 
 /* Media Queries */
-@media (max-width: 700px) {
+@media (max-width: 225px) {
+  footer {
+    height: 5.2em;
+  }
+}
+@media (min-width: 226px) and (max-width: 251px) {
+  footer {
+    height: 4.5em;
+  }
+}
+@media (max-width: 391px) {
+  .tile_s,
+  .tile_b {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 451px) {
+  table {
+    margin: 0% !important;
+  }
+}
+
+@media (max-width: 703px) {
   .container {
     grid-template-columns: 4fr;
     grid-template-rows: auto auto auto auto auto;
@@ -162,7 +185,17 @@ footer {
       "head"
       "comment"
       "main"
-      "sptest"
-      "serv_stat";
+      "serv_stat"
+      "sptest";
+  }
+}
+@media (min-width: 704px) and (max-width: 1580px) {
+  table {
+    margin: 0% !important;
+  }
+}
+@media (min-width: 704px) and (max-width: 987px) {
+  .container {
+    grid-template-columns: 10% auto 10%;
   }
 }

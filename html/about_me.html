@@ -2,11 +2,11 @@
 <!-- This website documents a bit of a dream and a bit of a goal. -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../styles/styles.css"/>
-    <link rel="stylesheet" href="../styles/styles_about_me.css"/>
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/styles_about_me.css" />
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/f65fb92f7a.js"
       crossorigin="anonymous"
@@ -35,52 +35,38 @@
           alt="Drawing of two children watching a large, blank screen."
         />
         <p>
-          I dislike subscription services -saying that I'm not a fan of them is
-          an understatement. Recent years have demonstrated (Hulu, Amazon Prime,
-          Netflix, Disney, HBO etc.) that, despite increasing subscription fees,
-          quality of service for the consumer continues to decline.
-          Advertisements are inserted into the media, despite having paid to
-          watch it. The media that we originally signed up to watch gets pulled
-          from their service so we lose access to the content, or the media is
-          moved to a different service so now we have to get two subscriptions.
-          The only thing that one might successfully argue has improved is
-          convenience associated with the subscription services.
+          I strongly dislike subscription services. Recent years with Hulu,
+          Amazon Prime, Netflix, Disney, and HBO show that, despite rising fees,
+          service quality declines. Advertisements intrude on content we've paid
+          for, access to certain media is lost, or it moves to other services,
+          requiring multiple subscriptions. The only improvement is convenience.
         </p>
         <p>
-          Having such a perspective, for years, I have felt comfortable
-          streaming media online from third-party streaming sites that do not
-          require sign-up or charge fees under fair use. Unfortunately,
-          copyright holders have been quite proficient at targeting these
-          websites, and the quality of service on those websites has since
-          declined quite substantially, impacting convenience (as a result, my
-          three-year old knows and uses the term 'buffering').
+          Having such a perspective, under fair use, I've relied on third-party
+          streaming sites that don't charge fees, though copyright holders have
+          increasingly targeted these sites, degrading their quality and
+          impacting convenience—my three-year-old now knows the term
+          'buffering.'
         </p>
         <p>
-          My original goal with learning to self-host my own media library was
-          admittedly a bit vague: I wanted to do more than have some external
-          hard drives with directories of files, but I wasn't certain I wanted
-          to venture back into peer-to-peer file sharing after basically a
-          decade of not doing so. There is additional risk with file sharing,
-          and technology has gotten so complicated! I didn't understand most of
-          what I was doing when I was downloading software from random sources
-          on Napster and Limewire and cracking the software to use it without a
-          key or using a key generator -I just wanted to play Age of Empires!
-          The most recent time I'd torrented, I received a nasty-gram from my
-          VPN provider so I hadn't attempted that since.
+          My initial goal in self-hosting my media library was somewhat unclear:
+          I wanted more than just external hard drives with file directories,
+          but I was hesitant to return to peer-to-peer file sharing after nearly
+          a decade away. File sharing carries additional risks, and technology
+          has become quite complex. As a boy, I didn't fully understand what I
+          was doing while downloading software from random sources on Napster
+          and Limewire, cracking software or using key generators —I just wanted
+          to play Age of Empires!
           <small id="main_small">
             (all of this is completely hypothetical; I would never do something
             so illegal and irresponsible!)
           </small>
         </p>
         <p>
-          Eventually, I fell into an echo chamber online that was full of
-          complete nerds and digital anarchists, and I initially didn't quite
-          realize how polarized some of the group was. That echo chamber led me
-          to learn about Linux, open-source software and self-hosting data and
-          services. This latter point overlapped neatly with my frustration over
-          lack of digital privacy, the normalization of extreme data leaks and
-          leaks of the sensitive information of myself, my spouse and my infant
-          child.
+          Eventually, I found myself in an online echo chamber of digital
+          anarchists where I learned about Linux, open-source software and
+          self-hosting. These topics resonated with my concerns about digital
+          privacy and data leaks involving my family.
         </p>
       </section>
       <section id="meandered">
@@ -88,25 +74,24 @@
         <img
           src="../images/tennis.png"
           alt="Image of a dog distracted by too many tennis balls."
+          class="img_tennis"
         />
         <p>
-          The digital anarchists touted a particular suite of software as making
-          it elementary to access one's desired media, organize it and make it
-          available to users -perfect! This is exactly what I was looking for:
-          something presentable, navigable and easy to use for my spouse and
-          small children. This suite of software was most easily installed on
-          Linux, and I'd been looking to jump-ship from Windows at home for a
-          while. I started ordering hardware to convert my desktop gaming pc
-          (I'm more of a console guy anyways) to a home media server, installed
+          The digital anarchists recommended a software suite that simplified
+          media access, organization, and sharing—everything I sought for my
+          family. This software was best installed on Linux, and I had been
+          considering switching from Windows. I began converting my desktop
+          gaming PC into a home media server, installed
           <a href="https://www.linuxmint.com/download_lmde.php" class="link">
             Linux Mint Debian Edition (LMDE)
           </a>
-          on my laptop and researched home server operating systems. My interest
-          in planning for the future (scalability), desire to customize and lack
-          of familiarity with Terminals led me to
-          <a href="https://unraid.net/" class="link"> Unraid</a>, a proprietary
-          operating system based on slackware Linux that is wrapped in a
-          friendly GUI.
+          on my laptop, and researched home server operating systems. My
+          interest in scalability, customization, and unfamiliarity with
+          Terminals led me to
+          <a href="https://unraid.net/" class="link"> Unraid</a>, a
+          user-friendly proprietary OS based on Slackware Linux. Within a year,
+          I had started numerous projects, feeling overwhelmed by the array of
+          unfinished hardware scattered around me.
         </p>
         <p>
           Within the year, I had initiated enough projects that I felt like a
@@ -121,65 +106,94 @@
           src="../images/homelab.png"
           alt="A drawing of someone facing away, facing several computer screens, in a dimly lit room."
         />
-        <h3 id="inventory_list_name">Current hardware and current function:</h3>
+        <h3 id="inventory_list_name">Current hardware and functions:</h3>
         <ul>
           <!-- Continue to work on list; review current entries and add details-->
           <li>
-            <strong>Tower</strong>: primary Unraid server. 16TB HDD, 4TB NVMe,
-            64GB DDR4, 17 Docker containers (mostly turned off and not fully
-            configured or just not fully utilized -I need systems/habits to
-            facilitate some of it.). Roughly 6.5TB of the 16TB are consumed with
-            media and documents. I have a cloud backup of the boot media and
-            some local backups of the container configurations.
+            <strong>Tower</strong>: My Unraid server is the heart of my home
+            network, with 16TB HDD for media storage and 4TB NVMe for caching.
+            With 64GB of DDR4 RAM, it's running multiple Docker containers,
+            although many are currently dormant.
           </li>
           <li>
-            <strong>Hypervisor</strong>: proxmox server with amount of NVMe
-            storage and separate drives for yadayada. I've actually used this
-            more than I anticipated, but it's also not as cool as I thought it
-            would be. It's mostly useful for school, so far.
+            <strong>Hypervisor</strong>: My Proxmox server has exceeded my
+            expectations, providing a flexible environment for running virtual
+            machines. It's primarily used for school projects and testing
+            software.
           </li>
           <li>
-            <strong>Synology DiskStation</strong>: 12-bay Synology DiskStation.
-            It came with a small NVMe cache drive, and I just haven't made the
-            time to reflash the firmware and to install the OS and configure
-            another layed of my backup solution. I'd like to avoid backing up
-            most of my bulk media storage, but some of that goal depends on me
-            figuring out ZFS for my storage drives in my Unraid box.
+            <strong>Synology DiskStation</strong>: My 12-bay Synology
+            DiskStation is a powerful storage solution that I plan to configure
+            for backups and media storage. The small NVMe cache drive enhances
+            performance, but I need to update the firmware first.
           </li>
           <li>
-            <strong>Laptop</strong>: Primary workstation. Provides local
-            repository for personal notes accessed through Obsidian.
+            <strong>Laptop</strong>: My laptop serves as my primary workstation,
+            where I manage personal notes and projects using Obsidian. It's
+            lightweight and portable, making it perfect for studying on the go.
+            It's running Linux Mint Debian Edition.
           </li>
-          <li><strong>Desktop</strong>:</li>
-          <li><strong>Firewall box</strong>:</li>
-          <li><strong>N100 Mini-pc</strong>:</li>
-          <li><strong>RaspberryPi Zero</strong>:</li>
-          <li><strong>Samsung Galaxy Tab A9</strong>:</li>
-          <li><strong>Too many routers</strong>:</li>
+          <li>
+            <strong>Desktop</strong>: My desktop is a refurbished HP ProDesk 600
+            G5 MT. It's just a backup workstation and to test things. It's
+            running Linux Mint Debian Edition.
+          </li>
+          <li>
+            <strong>Firewall box</strong>: My dedicated firewall box is a HP
+            T740 Thin Client. Once I configure it, it will ensure that my home
+            network remains secure from external threats and facilitate network
+            segregation for personal devices, guest devices and smart-home
+            devices.
+          </li>
+          <li>
+            <strong>N100 Mini-pc</strong>: My Beelink EQ12 N100 mini-PC is
+            perfect for lightweight tasks and serves as an energy-efficient
+            machine for additional containers.
+          </li>
+          <li>
+            <strong>RaspberryPi Zero</strong>: This ran DietPi and hosted my
+            Pi-Hole DNS sinkhole for ad-blocking, until I accidentally reset the
+            power when I was stretching. I had configured it early in my
+            learning process so I'll probably reinstall the OS from scratch and
+            re-configure.
+          </li>
+          <li>
+            <strong>Samsung Galaxy Tab A9</strong>: Once I configure Immich on
+            my Unraid server, this device will act as a self-hosted digital
+            photo frame. I want a digital photo frame, but I don't want to share
+            my photos or network access with an additional corporation if I can
+            avoid it.
+          </li>
+          <li>
+            <strong>Too many consumer routers</strong>: Routers for wifi access
+            points, routers to act as a switch and bridge to the primary
+            network, routers for travel so I can have VPN on all devices in
+            hotels.
+          </li>
         </ul>
-        <p>Cloud services and function:</p>
+        <p id="cloud_services">Cloud services and function:</p>
         <ul>
           <li>
-            <em>Codeberg</em>: remote repository for personal notes accessed
-            through Obsidian
+            <em>Codeberg</em>: My Remote repository is for personal notes
+            accessed through Obsidian.
           </li>
-          <li>Cloud server</li>
+          <li>
+            <em>Cloud server</em>: *cough* *cough* server space in a
+            jurisdiction that is neutral to media copyrights and the DCMA.
+          </li>
         </ul>
         <p>
           I've continued to run into some technical skill roadblocks, and they
           seem to bring me back to the same thing: I need to learn more.
         </p>
       </section>
-      <section>
-        <br />
-        <br />
-        <br />
-        <p><a href="#top" class="return_links">Return to Top</a></p>
-        <p><a href="../index.html" class="return_links">Dashboard</a></p>
-      </section>
     </main>
     <footer>
       <p>
+        <a href="#top" class="return_links">Return to Top</a>
+        <a href="../index.html" class="return_links">Dashboard</a>
+      </p>
+      <p class="copyright_p">
         &copy;Copyright pending 2025<small><sub> (not really)</sub></small> by
         Michael Jones. All rights reserved.
       </p>

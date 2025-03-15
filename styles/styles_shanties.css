@@ -5,11 +5,25 @@ h3 {
 
 .song {
   margin: 0 30% 0 30%;
-  max-width: fit-content;
   font-style: italic;
   padding-top: 0.313em;
+  min-width: 460px;
 }
 .song_cite {
   display: block;
   text-align: center;
+}
+/* Media Queries */
+@media (max-width: 300px) {
+  .song {
+    min-width: 200px;
+    margin: 0;
+  }
+}
+@media (min-width: 300px) and (max-width: 703px) {
+  .song {
+    width: 58%;
+    margin: 0 auto;
+    min-width: 250px;
+  }
 }
