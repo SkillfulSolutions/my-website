@@ -42,7 +42,6 @@ main {
   display: flex;
   padding: 1em !important;
   text-decoration: none;
-  background-color: var(--color-1);
   color: #ffffff;
   font-weight: bold;
   font-size: 1.2em;
@@ -125,6 +124,11 @@ footer {
     height: 5.2em;
   }
 }
+@media (min-width: 252px) and (max-width: 491px) {
+  footer {
+    height: 4.5em;
+  }
+}
 @media (max-width: 305px) {
   .nav_menu ul li a {
     font-size: 0.9em;
@@ -182,11 +186,6 @@ footer {
   }
   .nav_menu ul li a:hover {
     transform: none;
-  }
-}
-@media (min-width: 252px) and (max-width: 491px) {
-  footer {
-    height: 4.5em;
   }
 }
 @media (min-width: 987px) and (max-width: 1024px) {

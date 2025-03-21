@@ -1,6 +1,7 @@
 /* Style sheet for enshittification.html */
 /* Body */
-h2 {
+h2,
+h3 {
   clear: both;
   text-align: center;
   margin-top: 0.5em;

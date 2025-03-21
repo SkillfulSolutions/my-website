@@ -4,8 +4,12 @@ h3 {
   text-align: center;
   margin-top: 0.5em;
 }
+p {
+  text-align: center;
+  margin: 0 20% 0 20%;
+  padding-top: 0.66em;
+}
 .song {
-  margin: 0 30% 0 30%;
   font-style: italic;
   padding-top: 0.313em;
   min-width: 460px;
